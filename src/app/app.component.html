@@ -14,11 +14,11 @@
           {{ number }}
         </li>
       </ul>
-      <ng-template [ngIf]="onlyOdd">
-        <p>Only odd</p>
-      </ng-template>
+      <p *appUnless="onlyOdd">Only odd</p>
       <p appBasicHighlight>Basic Directive</p>
-      <p appBetterHighlight>Basic Directive</p>
+      <p appBetterHighlight [defaultColor]="'red'" [highlightColor]="'green'">
+        Basic Directive
+      </p>
     </div>
   </div>
 </div>
